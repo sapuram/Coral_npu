@@ -1,0 +1,3 @@
+Command Line: /tools/synopsys/verdi/verdi/V-2023.12-SP2-5/platform/LINUXAMD64/bin/Novas -base -ssf build/inter.fsdb -sswr ./verdiLog/signal.rc
+uname(Linux bisitwo.bitsilica.com 5.14.0-570.32.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Aug 6 11:30:41 EDT 2025 x86_64)
+au time 1208746.380089 8511.828997 15970.486219 delta 346083328 346083328 total 961519616 961519616

@@ -1,0 +1,371 @@
+verdiSetActWin -dock widgetDock_<Message>
+simSetSimulator "-vcssv" -exec \
+           "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv" -args \
+           "+UVM_TESTNAME=coralnpu_test_base"
+debImport "-dbdir" "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir"
+debLoadSimResult /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/inter.fsdb
+wvCreateWindow
+wvRestoreSignal -win $_nWave2 "./verdiLog/signal.rc" -overWriteAutoAlias on \
+           -appendSignals on
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvExpandGroup -win $_nWave2 "AXI_master_if"
+verdiSetActWin -win $_nWave2
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-w"
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-b"
+wvScrollDown -win $_nWave2 5
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 3 )} 
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-aw"
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 3 )} 
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-aw" 14 )} 
+wvScrollDown -win $_nWave2 3
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-ar"
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-aw" 14 )} 
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 19
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/bvalid" \
+           -driver
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+wvSetCursor -win $_nWave2 33.774920 -snap {("AXI_master_if-b" 6)}
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/bvalid" \
+           -driver
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver" \
+           1 )} 
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver" \
+           2 )} 
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver" \
+           3 )} 
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver" \
+           2 )} 
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver" \
+           1 )} 
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/bvalid" \
+           -load
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcSelect -win $_nTrace1 -range {78 79 2 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {71 71 4 17 1 1}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {77 78 3 1 1 1}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {1 2 2 1 1 1}
+srcDeselectAll -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+verdiSetActWin -win $_nWave2
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/bvalid" \
+           -load
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcSelect -win $_nTrace1 -range {78 78 2 7 1 1}
+srcDeselectAll -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 3 )} 
+verdiSetActWin -win $_nWave2
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+verdiSetActWin -win $_nWave2
+verdiSetActWin -dock widgetDock_<OVM/UVM_Hier.>
+wvSetCursor -win $_nWave2 24.941479 -snap \
+           {("/coralnpu_top_tb/master_if/bvalid#Load" 0)}
+verdiSetActWin -win $_nWave2
+wvCollapseGroup -win $_nWave2 \
+           "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0\(1s\)#ActiveDriver"
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-aw"
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-b" 6 )} 
+wvSelectSignal -win $_nWave2 \
+           {( "AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load" \
+           1 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-b" 6)}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid#Load}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-b" 6)}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-b//coralnpu_top_tb/master_if/bvalid@0(1s)#ActiveDriver}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-b" 6)}
+wvScrollUp -win $_nWave2 2
+wvScrollUp -win $_nWave2 4
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-b" 0)}
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-b"
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-ar"
+wvScrollUp -win $_nWave2 1
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 6 -pos 5 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "name" -line 15 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 31 -pos 0 -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-w" 1 )} 
+verdiSetActWin -win $_nWave2
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/aclk" \
+           -driver
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "clk" -line 19 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schCreateWindow -win $_nSchema1 -level 1 -fanin
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -inst \
+          "coralnpu_top_tb.coralnpu_top_tb\(@1\):Init0:16:21:Init"
+schPushViewIn -win $_nSchema3
+srcSelect -win $_nTrace1 -range {16 21 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_3
+verdiSetActWin -win $_nSchema_3
+schSelect -win $_nSchema3 -port "coralnpu_top_tb.clk"
+schTraceDriver -win $_nSchema3
+schSelect -win $_nSchema3 -port "coralnpu_top_tb.clk"
+schTraceDriver -win $_nSchema3
+schSelect -win $_nSchema3 -port "coralnpu_top_tb.clk"
+schSelect -win $_nSchema3 -signal "coralnpu_top_tb.clk"
+schSelect -win $_nSchema3 -instpin \
+          "coralnpu_top_tb.coralnpu_top_tb\(@1\):Init0:16:21:Init" "O0"
+schSelect -win $_nSchema3 -port "coralnpu_top_tb.clk"
+schSelect -win $_nSchema3 -port "coralnpu_top_tb.clk"
+schCloseWindow -win $_nSchema3
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 29 0 17 -win $_nTrace1 -name "RvvCoreMiniVerificationAxi" -ctrlKey \
+          off
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "DUT" -line 30 -pos 1 -win $_nTrace1
+schCreateWindow -win $_nSchema1 -hierFlatten
+verdiSetActWin -win $_nSchema_4
+schSelect -win $_nSchema4 -inst "coralnpu_top_tb.DUT"
+schSelect -win $_nSchema4 -inst "coralnpu_top_tb.DUT"
+schPushViewIn -win $_nSchema4
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 34 -pos 2 -win $_nTrace1
+schCreateWindow -win $_nSchema1 -hierFlatten
+verdiSetActWin -win $_nSchema_5
+schZoomIn -win $_nSchema5 -pos 33390 13661
+schZoomIn -win $_nSchema5 -pos 33390 13660
+schZoomIn -win $_nSchema5 -pos 33390 13660
+schZoomIn -win $_nSchema5 -pos 33390 13660
+schZoomIn -win $_nSchema5 -pos 33390 13660
+verdiDockWidgetMaximize -dock windowDock_nSchema_5
+schZoomOut -win $_nSchema5 -pos 19540 34791
+schZoomOut -win $_nSchema5 -pos 19540 34791
+schZoomOut -win $_nSchema5 -pos 19541 34790
+schZoomOut -win $_nSchema5 -pos 19540 34790
+schZoomOut -win $_nSchema5 -pos 19540 34790
+schZoomOut -win $_nSchema5 -pos 19540 34790
+schZoomIn -win $_nSchema5 -pos 19539 34789
+schZoomIn -win $_nSchema5 -pos 19539 34789
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.master_if.drv_cb_master"
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.DUT._ExprInst__:axiSlave:1"
+schPushViewIn -win $_nSchema5
+srcSetScope "coralnpu_top_tb.DUT" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {250822 250822 1 13 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.DUT"
+schPushViewIn -win $_nSchema5
+verdiSetActWin -win $_nSchema_5
+verdiDockWidgetRestore -dock windowDock_nSchema_5
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.DUT"
+schPushViewIn -win $_nSchema5
+verdiSetActWin -win $_nWave2
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_4
+verdiSetActWin -win $_nSchema_4
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_5
+verdiSetActWin -win $_nSchema_5
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.master_if.mon_cb_master"
+schPushViewIn -win $_nSchema5
+srcSetScope "coralnpu_top_tb.master_if" -delim "." -win $_nTrace1
+srcSelect -win $_nTrace1 -range {94 111 1 2 1 1}
+verdiSetActWin -win $_nWave2
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_5
+verdiSetActWin -win $_nSchema_5
+schSelect -win $_nSchema5 -inst "coralnpu_top_tb.master_if.drv_cb_master"
+schPushViewIn -win $_nSchema5
+srcSelect -win $_nTrace1 -range {75 92 1 3 1 1}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 83 -pos 9 -win $_nTrace1
+schCreateWindow -win $_nSchema1 -level 1 -fanin
+nsMsgSwitchTab -tab general
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_5
+verdiSetActWin -win $_nSchema_5
+schCloseWindow -win $_nSchema5
+verdiSetActWin -win $_nWave2
+schCloseWindow -win $_nSchema4
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 80 -pos 3 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcSelect -win $_nTrace1 -range {81 84 4 1 1 1}
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+verdiSetActWin -win $_nWave2
+wvCollapseGroup -win $_nWave2 \
+           "AXI_master_if/AXI_master_if-w//coralnpu_top_tb/master_if/aclk@0\(1s\)#ActiveDriver"
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-w" 1 )} 
+wvSetPosition -win $_nWave2 \
+           {("AXI_master_if/AXI_master_if-w//coralnpu_top_tb/master_if/aclk@0(1s)#ActiveDriver" 0)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 5)}
+wvSetPosition -win $_nWave2 \
+           {("AXI_master_if/AXI_master_if-w//coralnpu_top_tb/master_if/aclk@0(1s)#ActiveDriver" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 \
+           {("AXI_master_if/AXI_master_if-w//coralnpu_top_tb/master_if/aclk@0(1s)#ActiveDriver" 1)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 4)}
+wvSelectGroup -win $_nWave2 \
+           {AXI_master_if/AXI_master_if-w//coralnpu_top_tb/master_if/aclk@0(1s)#ActiveDriver}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 4)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 1)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 0)}
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-w"
+wvExpandGroup -win $_nWave2 "AXI_slave_if"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-CB"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-CB"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-W"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-W"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-R"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-R"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-B"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-B"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-AW"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-AW"
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-AR"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-AR"
+wvScrollDown -win $_nWave2 0
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-w"
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-w"
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-w} \
+           {AXI_master_if/AXI_master_if-b} {AXI_master_if/AXI_master_if-aw}
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-ar}
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-aw}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-b" 0)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-w" 0)}
+wvSetPosition -win $_nWave2 {("AXI_master_if" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if" 0)}
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-aw"
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-aw}
+wvExpandGroup -win $_nWave2 "AXI_slave_if/G3-CB"
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-aw}
+wvScrollDown -win $_nWave2 31
+wvSelectSignal -win $_nWave2 {( "AXI_slave_if/G3-CB" 5 )} 
+wvScrollUp -win $_nWave2 31
+wvSelectGroup -win $_nWave2 {AXI_master_if/AXI_master_if-aw}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-aw" 0)}
+wvAddSignal -win $_nWave2 "/coralnpu_top_tb/slave_if/drv_cb_slave/aresetn"
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-aw" 0)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-aw" 1)}
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-aw" 2)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("AXI_master_if/AXI_master_if-aw" 2)}
+wvSelectGroup -win $_nWave2 {AXI_master_if}
+wvSetPosition -win $_nWave2 {("AXI_master_if" 0)}
+wvAddSignal -win $_nWave2 "/coralnpu_top_tb/slave_if/drv_cb_slave/aresetn"
+wvSetPosition -win $_nWave2 {("AXI_master_if" 0)}
+wvSetPosition -win $_nWave2 {("AXI_master_if" 1)}
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-aw" 1 )} 
+wvCollapseGroup -win $_nWave2 "AXI_master_if/AXI_master_if-aw"
+wvCollapseGroup -win $_nWave2 "AXI_slave_if/G3-CB"
+wvScrollDown -win $_nWave2 0
+wvExpandGroup -win $_nWave2 "AXI_master_if/AXI_master_if-aw"
+wvSetCursor -win $_nWave2 53.599790 -snap {("AXI_master_if-aw" 1)}
+wvSelectSignal -win $_nWave2 {( "AXI_master_if" 1 )} 
+wvSelectSignal -win $_nWave2 {( "AXI_master_if/AXI_master_if-aw" 11 )} 
+wvShowOneTraceSignals -win $_nWave2 -signal "/coralnpu_top_tb/master_if/awready" \
+           -driver
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiDockWidgetRestore -dock windowDock_nWave_2
+verdiSetActWin -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "_axiSlave_io_axi_write_addr_ready" -line 250951 -pos 1 -win \
+          $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcSetScope "coralnpu_top_tb.DUT.axiSlave.io_axi_write_addr_ready" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "io_axi_write_addr_ready" -line 248339 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_<OVM/UVM_Hier.>
+verdiDockWidgetSetCurTab -dock widgetDock_<Decl._Tree>
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Inst._Tree>
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcTBTBHTogg -off
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetCursor -win $_nWave2 495.407770 -snap {("AXI_master_if-aw" 5)}
+verdiSetActWin -win $_nWave2
+debExit

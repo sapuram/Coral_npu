@@ -1,0 +1,98 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_V-2023.12-SP2-5
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+breakpoint_count = 1
+BP1 = stop -line 267634 -file /home/bitsilica/SAT/ajay/new_coralNPU/coralnpu_RTL/RvvCoreMiniVerificationAxi.sv \\
+
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/inter.fsdb
+syncTime = 82.457
+viewport = 0 33 1920 988 0 0 376 1918
+activeNode = "handshake_fifo"
+activeScope = "handshake_fifo"
+activeFile = "../coralnpu_RTL/RvvCoreMiniVerificationAxi.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 267611
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+safetyAwareAnnot = True
+amsAnnot = True
+DnDtraceCrossHierOnly = True
+leadingZero = False
+signalPane = False
+SourceVerticalScrollLines = 5
+Scope1 = "handshake_fifo"
+rangeSelection = 267634 267634 1 12 1 1
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-dbdir" "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir" 
+invokeDir = /home/bitsilica/SAT/ajay/new_coralNPU/sim
+[hb.sourceTab.1]
+scope = handshake_fifo
+File = /home/bitsilica/SAT/ajay/new_coralNPU/coralnpu_RTL/RvvCoreMiniVerificationAxi.sv
+Line = 267612
+[nMemoryManager]
+WaveformFile = /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/inter.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 25 1920 402 274 65
+primaryWindow = TRUE
+SessionFile = /home/bitsilica/SAT/ajay/new_coralNPU/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+waveformToolTip = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE
+fsaRegMask = TRUE
+fsaCoreMask = TRUE
+fsaSfsmMask = TRUE
+fsaEcrMask = TRUE
+tPropMask = TRUE

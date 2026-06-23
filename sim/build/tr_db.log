@@ -1,0 +1,5 @@
+  CREATE_STREAM @0 {NAME:aw_seqch T:Transactions SCOPE:uvm_test_top.env_h.axi_m_agt_h.m_aw_agth.seqrh STREAM:2488}
+  CREATE_STREAM @0 {NAME:w_seqch T:Transactions SCOPE:uvm_test_top.env_h.axi_m_agt_h.m_w_agth.seqrh STREAM:2491}
+  CREATE_STREAM @0 {NAME:b_seqch T:Transactions SCOPE:uvm_test_top.env_h.axi_m_agt_h.m_b_agth.seqrh STREAM:2494}
+  CREATE_STREAM @0 {NAME:ar_seqch T:Transactions SCOPE:uvm_test_top.env_h.axi_m_agt_h.m_ar_agth.seqrh STREAM:2497}
+  CREATE_STREAM @0 {NAME:r_seqch T:Transactions SCOPE:uvm_test_top.env_h.axi_m_agt_h.m_r_agth.seqrh STREAM:2500}

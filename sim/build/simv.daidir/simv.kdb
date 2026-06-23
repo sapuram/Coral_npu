@@ -1,0 +1,25 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/bitsilica/SAT/ajay/new_coralNPU/sim
+VCS_HOME=/tools/synopsys/vcs/vcs/V-2023.12-SP2-5
+VERDI_HOME=/tools/synopsys/verdi/verdi/V-2023.12-SP2-5
+SystemC=FALSE
+UUM=FALSE
+KDB=TRUE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=uvm_custom_install_recording uvm_custom_install_verdi_recording handshake_fifo dff edff_2d div_sqrt_mvp_wrapper rvv_backend_alu_unit_mask_viota32 coralnpu_top_tb 
+OPTION=-ssv -ssy 
+ELAB_OPTION=-ssv -ssy 
+ELAB=TRUE
+SIMV_WRAPPER=FALSE
+[vcs]
+RUN_ELABCOM=unset TURBO_LOG_DIR ;\rm -rf /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/elabcomLog ;/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/bin/elabcom -logdir /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/elabcomLog  -simvdaidir /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir  -lib /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/work  -saveLevel  -elab /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/kdb -simflow -simdir /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/kdb_libs -topfile /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/.elabcomTopFile -pkgfile /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/.elabcomPkgFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/.elabcomReport || echo Fail >& /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/.elabcomReport; \rm -rf /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/work.lib++ /home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/kdb_libs/ 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a
+
+[CompInfo]
+FLOW_OPTS=-kdb -ssv -ssy 

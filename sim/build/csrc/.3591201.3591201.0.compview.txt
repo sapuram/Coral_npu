@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1780463025.036090066, "rt":43.87, "ut":41.08, "st":1.74}}
+{"vcselab":{"timestamp_begin":1780463068.955008730, "rt":3.69, "ut":0.86, "st":0.16}}
+{"link":{"timestamp_begin":1780463072.681615719, "rt":1.07, "ut":0.62, "st":0.42}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1780463024.576161269}
+{"VCS_COMP_START_TIME": 1780463024.576161269}
+{"VCS_COMP_END_TIME": 1780463073.848758182}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -kdb -debug_access+all -ntb_opts uvm-1.2 +incdir+../coralnpu_RTL +incdir+../tb_tops +incdir+../uvm_tb/agents/axi_master +incdir+../uvm_tb/agents/axi_master/axi_m_aw_agt +incdir+../uvm_tb/agents/axi_master/axi_m_w_agt +incdir+../uvm_tb/agents/axi_master/axi_m_b_agt +incdir+../uvm_tb/agents/axi_master/axi_m_ar_agt +incdir+../uvm_tb/agents/axi_master/axi_m_r_agt +incdir+../uvm_tb/agents/axi4 +incdir+../uvm_tb/agents/axi4/slave_aw_agent +incdir+../uvm_tb/agents/axi4/slave_w_agent +incdir+../uvm_tb/agents/axi4/slave_b_agent +incdir+../uvm_tb/agents/axi4/slave_ar_agent +incdir+../uvm_tb/agents/axi4/slave_r_agent +incdir+../uvm_tb/env +incdir+../uvm_tb/package +incdir+../uvm_tb/tests +define+VLEN_128 +define+ZVE32F_ON +define+TB_SUPPORT -Mdir=build/csrc -o build/simv ../uvm_tb/package/coralnpu_pkg.sv ../coralnpu_RTL/axi_master_if.sv ../coralnpu_RTL/axi_slave_if.sv ../coralnpu_RTL/RvvCoreMiniVerificationAxi.sv ../tb_tops/coralNPU_tb_top.sv"}
+{"vcs1": {"peak_mem": 1006148}}
+{"vcselab": {"peak_mem": 327128}}
