@@ -17,6 +17,7 @@ class coralnpu_test_base extends uvm_test;
 	function void build_phase (uvm_phase phase);
 		super.build_phase(phase);
 		env_h=coralnpu_env_base::type_id::create("env_h", this);
+		uvm_top.set_timeout(500, 0);
 	endfunction 
 	
 	function void connect_phase(uvm_phase phase);
@@ -72,8 +73,8 @@ class coralnpu_test_base extends uvm_test;
 			b_seqch.start  (env_h.axi_m_agt_h.m_b_agth.seqrh);
 			ar_seqch.start (env_h.axi_m_agt_h.m_ar_agth.seqrh);
 			r_seqch.start  (env_h.axi_m_agt_h.m_r_agth.seqrh);
-		join 
-		#1000;
+		join_none
+		#10000;
 		`uvm_info(get_type_name(), "Run_Phase_Completed", UVM_LOW)
 		$display("================================================================================");
 		phase.drop_objection(this);

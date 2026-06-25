@@ -1623,6 +1623,112 @@ __attribute__((weak)) SV_STRING fsdbTransDPI_get_class_str(/* OUTPUT */int *A_1,
 }
 #endif /* __VCS_IMPORT_DPI_STUB_fsdbTransDPI_get_class_str */
 
+#ifndef __VCS_IMPORT_DPI_STUB_sram_init
+#define __VCS_IMPORT_DPI_STUB_sram_init
+__attribute__((weak)) void* sram_init(/* INPUT */long long A_1, /* INPUT */long long A_2, /* INPUT */int A_3)
+{
+    static int _vcs_dpi_stub_initialized_ = 0;
+    static void* (*_vcs_dpi_fp_)(/* INPUT */long long A_1, /* INPUT */long long A_2, /* INPUT */int A_3) = NULL;
+    if (!_vcs_dpi_stub_initialized_) {
+        _vcs_dpi_fp_ = (void* (*)(long long A_1, long long A_2, int A_3)) dlsym(RTLD_NEXT, "sram_init");
+        _vcs_dpi_stub_initialized_ = 1;
+    }
+    if (_vcs_dpi_fp_) {
+        return _vcs_dpi_fp_(A_1, A_2, A_3);
+    } else {
+        const char *fileName;
+        int lineNumber;
+        svGetCallerInfo(&fileName, &lineNumber);
+        vcsMsgReport1("DPI-DIFNF", fileName, lineNumber, 0, 0, "sram_init");
+        return 0;
+    }
+}
+#endif /* __VCS_IMPORT_DPI_STUB_sram_init */
+
+#ifndef __VCS_IMPORT_DPI_STUB_sram_read
+#define __VCS_IMPORT_DPI_STUB_sram_read
+__attribute__((weak)) void sram_read(/* INPUT */void* A_1, /* INPUT */int A_2, /* OUTPUT */svBitVecVal *A_3)
+{
+    static int _vcs_dpi_stub_initialized_ = 0;
+    static void (*_vcs_dpi_fp_)(/* INPUT */void* A_1, /* INPUT */int A_2, /* OUTPUT */svBitVecVal *A_3) = NULL;
+    if (!_vcs_dpi_stub_initialized_) {
+        _vcs_dpi_fp_ = (void (*)(void* A_1, int A_2, svBitVecVal* A_3)) dlsym(RTLD_NEXT, "sram_read");
+        _vcs_dpi_stub_initialized_ = 1;
+    }
+    if (_vcs_dpi_fp_) {
+        _vcs_dpi_fp_(A_1, A_2, A_3);
+    } else {
+        const char *fileName;
+        int lineNumber;
+        svGetCallerInfo(&fileName, &lineNumber);
+        vcsMsgReport1("DPI-DIFNF", fileName, lineNumber, 0, 0, "sram_read");
+    }
+}
+#endif /* __VCS_IMPORT_DPI_STUB_sram_read */
+
+#ifndef __VCS_IMPORT_DPI_STUB_sram_write
+#define __VCS_IMPORT_DPI_STUB_sram_write
+__attribute__((weak)) void sram_write(/* INPUT */void* A_1, /* INPUT */int A_2, const /* INPUT */svBitVecVal *A_3, /* INPUT */int A_4)
+{
+    static int _vcs_dpi_stub_initialized_ = 0;
+    static void (*_vcs_dpi_fp_)(/* INPUT */void* A_1, /* INPUT */int A_2, const /* INPUT */svBitVecVal *A_3, /* INPUT */int A_4) = NULL;
+    if (!_vcs_dpi_stub_initialized_) {
+        _vcs_dpi_fp_ = (void (*)(void* A_1, int A_2, const svBitVecVal* A_3, int A_4)) dlsym(RTLD_NEXT, "sram_write");
+        _vcs_dpi_stub_initialized_ = 1;
+    }
+    if (_vcs_dpi_fp_) {
+        _vcs_dpi_fp_(A_1, A_2, A_3, A_4);
+    } else {
+        const char *fileName;
+        int lineNumber;
+        svGetCallerInfo(&fileName, &lineNumber);
+        vcsMsgReport1("DPI-DIFNF", fileName, lineNumber, 0, 0, "sram_write");
+    }
+}
+#endif /* __VCS_IMPORT_DPI_STUB_sram_write */
+
+#ifndef __VCS_IMPORT_DPI_STUB_sram_cleanup
+#define __VCS_IMPORT_DPI_STUB_sram_cleanup
+__attribute__((weak)) void sram_cleanup(/* INPUT */void* A_1)
+{
+    static int _vcs_dpi_stub_initialized_ = 0;
+    static void (*_vcs_dpi_fp_)(/* INPUT */void* A_1) = NULL;
+    if (!_vcs_dpi_stub_initialized_) {
+        _vcs_dpi_fp_ = (void (*)(void* A_1)) dlsym(RTLD_NEXT, "sram_cleanup");
+        _vcs_dpi_stub_initialized_ = 1;
+    }
+    if (_vcs_dpi_fp_) {
+        _vcs_dpi_fp_(A_1);
+    } else {
+        const char *fileName;
+        int lineNumber;
+        svGetCallerInfo(&fileName, &lineNumber);
+        vcsMsgReport1("DPI-DIFNF", fileName, lineNumber, 0, 0, "sram_cleanup");
+    }
+}
+#endif /* __VCS_IMPORT_DPI_STUB_sram_cleanup */
+
+#ifndef __VCS_IMPORT_DPI_STUB_sram_load_elf
+#define __VCS_IMPORT_DPI_STUB_sram_load_elf
+__attribute__((weak)) void sram_load_elf(/* INPUT */const char* A_1)
+{
+    static int _vcs_dpi_stub_initialized_ = 0;
+    static void (*_vcs_dpi_fp_)(/* INPUT */const char* A_1) = NULL;
+    if (!_vcs_dpi_stub_initialized_) {
+        _vcs_dpi_fp_ = (void (*)(const char* A_1)) dlsym(RTLD_NEXT, "sram_load_elf");
+        _vcs_dpi_stub_initialized_ = 1;
+    }
+    if (_vcs_dpi_fp_) {
+        _vcs_dpi_fp_(A_1);
+    } else {
+        const char *fileName;
+        int lineNumber;
+        svGetCallerInfo(&fileName, &lineNumber);
+        vcsMsgReport1("DPI-DIFNF", fileName, lineNumber, 0, 0, "sram_load_elf");
+    }
+}
+#endif /* __VCS_IMPORT_DPI_STUB_sram_load_elf */
+
 #ifndef __VCS_EXPORT_DPI_DUMMY_REFERENCES__
 #define __VCS_EXPORT_DPI_DUMMY_REFERENCES__
 /* Dummy references to those export DPI routines.

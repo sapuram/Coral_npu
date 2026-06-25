@@ -31,7 +31,7 @@ endfunction
 
 	task run_phase(uvm_phase phase);
 	forever
-		collect_rddata;
+		#100;
 	endtask
 
 task collect_rddata;

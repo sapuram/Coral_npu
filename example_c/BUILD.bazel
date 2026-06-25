@@ -1,0 +1,19 @@
+
+load("@coralnpu_hw//rules:coralnpu_v2.bzl", "coralnpu_v2_binary")
+
+
+
+[
+
+    coralnpu_v2_binary(
+
+        name = src[:-3],
+
+        srcs = [src],
+
+    )
+
+    for src in glob(["*.cc"])
+
+]
+

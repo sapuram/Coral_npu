@@ -19,22 +19,12 @@
             endfunction
 
             task run_phase(uvm_phase phase);
-		    @(vif.drv_cb_slave);
-		    if(vif.drv_cb_slave.aresetn==0)
-		    vif.drv_cb_slave.awready<=0;
-
-	    wait(vif.drv_cb_slave.aresetn==1);
-		    @(vif.drv_cb_slave);
-	    		vif.drv_cb_slave.awready<=1;
               forever
                 begin
-		//  if (req != null)
                   seq_item_port.get_next_item(req);
-		  vif.drv_cb_slave.awready<=1;
-                  driver_wraddr(req);
-                  rsp.set_id_info(req);
+
+
                   seq_item_port.item_done();
-                  seq_item_port.put(rsp);
                 end
             endtask
 

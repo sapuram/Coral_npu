@@ -27,8 +27,7 @@ class slave_axi_rdaddr_mon extends uvm_monitor;
 	endfunction
 
 	task run_phase(uvm_phase phase);
-		forever
-			collect_rddata;
+
 	endtask
 
 	task collect_rddata;

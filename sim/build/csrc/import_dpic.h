@@ -156,3 +156,13 @@ struct	_vcs_dpi_rsrc_msg_struct	{
  extern unsigned int fsdbTransDPI_get_enum_id(/* OUTPUT */int *state, /* INPUT */const char* enum_var_name);
 
  extern SV_STRING fsdbTransDPI_get_class_str(/* OUTPUT */int *state, /* INPUT */const char* class_var_name, /* INPUT */const char* options);
+
+ extern void* sram_init(/* INPUT */long long global_addr, /* INPUT */long long size_bytes, /* INPUT */int width_bytes);
+
+ extern void sram_read(/* INPUT */void* handle, /* INPUT */int addr, /* OUTPUT */svBitVecVal *data);
+
+ extern void sram_write(/* INPUT */void* handle, /* INPUT */int addr, const /* INPUT */svBitVecVal *data, /* INPUT */int wmask);
+
+ extern void sram_cleanup(/* INPUT */void* handle);
+
+ extern void sram_load_elf(/* INPUT */const char* filename);

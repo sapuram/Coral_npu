@@ -5,5 +5,5 @@ PYTHONPATH=/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/lib/pylib27
 export PYTHONPATH
 LD_LIBRARY_PATH=/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/lib:/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/lib/pylib27
 export LD_LIBRARY_PATH
-/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/bin/vcsfind_create_index.exe  -z  "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/./idents_xy6QP4.xml.gz" "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+/tools/synopsys/vcs/vcs/V-2023.12-SP2-5/linux64/bin/vcsfind_create_index.exe  -z  "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/./idents_o5QXmH.xml.gz" "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
 \mv "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/bitsilica/SAT/ajay/new_coralNPU/sim/build/simv.daidir/debug_dump/fsearch/fsearch.db"

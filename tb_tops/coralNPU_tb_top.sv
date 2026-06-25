@@ -3,6 +3,7 @@ module coralnpu_top_tb;
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 import coralnpu_pkg::*;
+import "DPI-C" function void sram_load_elf(input string filename);
 
 parameter int unsigned ADDR_WIDTH=32;
 parameter int unsigned DATA_WIDTH=128;
@@ -144,6 +145,16 @@ RvvCoreMiniVerificationAxi DUT(
 task d; 
 	@(posedge clk);
 endtask
+
+initial begin 
+	string elf_path;
+	// Load the ELF firmware into SRAM backdoor dynamically using plusarg
+	if (!$value$plusargs("ELF_PATH=%s", elf_path)) begin
+		elf_path = "../../coralnpu-main/examples/hello_world.elf"; // Default fallback
+	end
+	$display("Loading ELF file: %s", elf_path);
+	sram_load_elf(elf_path);
+end 
 
 initial begin
 	$display("RESET_DUT_start's");

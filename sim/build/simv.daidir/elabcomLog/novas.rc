@@ -230,10 +230,10 @@ cmd_enter_form = FALSE
 SyncBrowserDir = TRUE
 FindBarVisible = 
 recent_commands_nSchema = schTraceDriver
-ColorTheme = classic
-version = Verdi_V-2023.12-SP2-5
 recent_commands_nWave = traceDriver,gpSimulateDrop_bindKey,gpSetSigCursor,gpSimulateDrag_bindKey,editCut,traceLoad,addSignalsOfSelectedScopes,getSignal,saveSignal,selectStuckSignals
 recent_commands_Verdi = tbvTBHTogg,hbShowSignalType,schCreateWindowByFanInGroup,schCreateWindowByHierFlattenGroup,hbTraceDriver,schCreateWindowByScopeRMB,ToolBarTraceDriverGroup,UndoTraceGroup,textCaretLineRight,schCreateWindowByScopeGroup
+ColorTheme = classic
+version = Verdi_V-2023.12-SP2-5
 prevColorTheme = classic
 SignalCaseInSensitive = FALSE
 [GlobalProp]
@@ -680,40 +680,40 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = "Block's First Line"
-width = 120
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = "Code"
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = "Type"
-width = 60
-visualIndex = 4
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = "Severity"
 width = 60
 visualIndex = 2
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+name = "Block's First Line"
+width = 120
+visualIndex = 1
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = "Message"
 width = 2000
 visualIndex = 5
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column5]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = "Time"
 width = 60
 visualIndex = 0
 isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = "Code"
+width = 60
+visualIndex = 3
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column5]
+name = "Type"
+width = 60
+visualIndex = 4
+isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.ruleHistory]
 /tools/synopsys/verdi/verdi/V-2023.12-SP2-5/share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc = 
@@ -792,7 +792,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 560 287 800 479 164 381 390 89
-viewPort = 0 25 1920 404 472 65
+viewPort = 0 25 1920 402 274 65
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -1334,7 +1334,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1920 404 472 65
+viewPort = 0 25 1920 402 274 65
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

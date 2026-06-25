@@ -35,9 +35,11 @@ class slave_axi_wrdata_mon extends uvm_monitor;
   
   task run_phase(uvm_phase phase);
     forever
-     collect_wrdata;
+		#100;
      
   endtask
+  
+  
   task collect_wrdata;
   axi_xtn xtn;
 

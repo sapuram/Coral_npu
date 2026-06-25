@@ -32,40 +32,7 @@ endfunction
 
 
 virtual task run_phase(uvm_phase phase);
-
- forever 
-
-   begin
-
-    sample_dut();
-
-   end 
-
 endtask 
-
-
-
-task sample_dut();
-@(vif.mon_cb_master);
-if(vif.mon_cb_master.rvalid && vif.mon_cb_master.rready) 
-
-       begin
-
-	  tx.rdata.push_back(vif.mon_cb_master.rdata);
-
-          if(vif.mon_cb_master.rlast ==1) 
-
-            begin 
-
-              tx.rresp.push_back(vif.mon_cb_master.rresp);
-
-	      //an_port.write(tx);
-
-	    end	 
-
-       end  
-
-endtask
 
 endclass
 

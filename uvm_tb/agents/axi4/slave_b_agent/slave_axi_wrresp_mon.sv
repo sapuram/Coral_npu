@@ -29,17 +29,9 @@ class slave_axi_wrresp_mon extends uvm_monitor;
     
     forever
     begin
-	    @(vif.mon_cb_slave);
-	    if(vif.mon_cb_slave.bvalid && vif.mon_cb_slave.bready)
-	    begin
-         xtn=axi_xtn::type_id::create("xtn");
-		`uvm_info ("SLAVE--WRREP---MON","AT THE RISING EDGE AT RESP MONITOR ",UVM_LOW)
-                xtn.bid=vif.mon_cb_slave.bid;
-                xtn.bresp=axi_resp_t'(vif.mon_cb_slave.bresp);
-                `uvm_info("SLAVE_AXI_WRRESP_MON",$sformatf("packet from wrresp mon %0p",xtn.sprint),UVM_LOW)
-                 mp.write(xtn);
-          end
-  end 
+	#100;
+    end
+
      endtask
   
      

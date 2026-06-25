@@ -18,19 +18,10 @@ class slave_axi_wrresp_drv extends uvm_driver#(axi_xtn);
 	endfunction
 
 	task run_phase(uvm_phase phase);
-		@(vif.drv_cb_slave);
-		if(vif.drv_cb_slave.aresetn==0)
-		begin
-			vif.drv_cb_slave.bresp <= AXI_OKAY;
-                 vif.drv_cb_slave.bid <= 0;
-		 vif.drv_cb_slave.bvalid <= 0;
-		end
-		
-		wait(vif.drv_cb_slave.aresetn==0);
 		forever
 		begin
 			seq_item_port.get_next_item(req);
-			drive_bresp(req);
+
 			seq_item_port.item_done();
 		end
 	endtask
